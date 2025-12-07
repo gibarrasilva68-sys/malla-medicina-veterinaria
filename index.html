@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+    .contenedor {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .ramo {
+      background: white;
+      border: 2px solid #333;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .ramo.aprobado {
+      background: #a8e6a3;
+      text-decoration: line-through;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📚 Mi Malla Interactiva</h1>
+
+<div class="contenedor">
+  <div class="ramo" onclick="toggle(this)">Matemática I</div>
+  <div class="ramo" onclick="toggle(this)">Química General</div>
+  <div class="ramo" onclick="toggle(this)">Biología</div>
+  <div class="ramo" onclick="toggle(this)">Anatomía</div>
+</div>
+
+<script>
+  function toggle(elemento) {
+    elemento.classList.toggle("aprobado");
+  }
+</script>
+
+</body>
+</html>
